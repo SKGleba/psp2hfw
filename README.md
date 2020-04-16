@@ -18,7 +18,7 @@ The goal of this repository is to provide tools and instructions for running a h
 Dual FW lets you run the second firmware from a SD card in a GC-SD adapter; it is experimental and expected to be less stable (but safer) than having a single fw.
 
 0) Make sure that you have your GC-SD adapter inserted and detected by the system; use either YAMT or mount as uma0 using another tool
-1) Download and run the emmcfw->gcsd clone tool from https://github.com/SKGleba/psp2hfw/tree/master/tools/clone_int2ext_fwonly ; it will clone firmware/software sectors to GCSD
+1) Download and run the emmcfw->gcsd clone tool from https://github.com/SKGleba/psp2hfw/tree/master/tools/clone_int2ext ; it will clone firmware/software sectors to GCSD
     - It is recommended to use xerpi's plugin loader for that ( https://bitbucket.org/xerpi/vita_plugin_loader )
     - If the load fails it means that the SD card was not detected; also cloning will take some time
     - After the clone finishes uninstall your GC-SD driver unless you are using sony's (internal manufacturing mode or yamt)
