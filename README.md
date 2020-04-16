@@ -4,6 +4,7 @@ The goal of this repository is to provide tools and instructions for running a h
  
 # Preparation
 0) Make sure that you have the latest version of enso_ex ( https://github.com/SKGleba/enso_ex ) installed and running
+    - also make sure that your GC-SD adapter is fully functional in case of recovery
 1) Download the correct 0syscall6 bootmgr version for from https://github.com/SKGleba/enso_ex/tree/master/sdrecovery/BOOTMGR/0syscall6 and put in ux0:eex/data/ as bootmgr.e2xp
 2) Download 0syscall6 HFW version from https://github.com/SKGleba/0syscall6 , put it in ur0:tai/ and add to taiHEN config.txt
 3) Download the correct firmware version fix from https://github.com/SKGleba/enso_ex/tree/master/sdrecovery/PATCH/fw_spoof and put in ux0:eex/payloads/
@@ -66,7 +67,7 @@ With enso_ex you should be able to recover from all possible HFW related soft/"h
     - If the vita does not show the logo, hold power for 30s afterwards and see if it works
     - If the vita shows the bootlogo - go into safe mode and reinstall the firmware, do not follow the next steps
 4) Dump the first 0x200 bytes from the SD card (using [read] in win32dimg or dd) and open using a hex editor
-    - if the first 4 bytes are BE BA FE CA (0xcafebabe) - payload did not run (either faulty sd2vita/slot or incorrect image; or just held select for too short); retry from step 1
+    - if the first 4 bytes are BE BA FE CA (0xcafebabe) - payload did not run (either faulty GC-SD/slot or incorrect image; or just held select for too short); retry from step 1
     - if the first 4 bytes are EF BE AD DE (0xdeadbeef) - should not happen, weird, retry from step 1
     - if the first 4 bytes are EF BE FE CA (0xcafebeef) - payload finished, if the vita does not boot up then the inactive/recovery os0 is broken; follow the next steps
     - if the bytes 12-20 are not 00 - the flash or read failed, make sure its a correct image and retry from step 1; if it still fails create an issue here on github
