@@ -33,10 +33,10 @@ Currently not all firmwares can be installed on top of current base bootloaders 
  - Please note that not all homebrew apps/plugins are compatible with all firmwares; HenKaku and TaiHen may be incompatible too.
 
 ### Base: 3.60
- - 3.61 works fine.
+ - 3.61 everything works fine.
  
 ### Base: 3.65
- - 3.67 - 3.73 works fine.
+ - 3.67 - 3.73 everything works fine.
  
 ## Installation
 1) Download and install the HFW installer (HFWI.vpk); make sure that you have unsafe homebrew enabled in henkaku settings
@@ -80,8 +80,14 @@ With enso_ex you should be able to recover from all possible HFW related soft/"h
 2) Flash this image to an SD card and put it in the GC-SD adapter into the PS Vita GC slot
 3) Connect the console to a power source and hold [select] and [power] for 20-30s, then keep holding select; it will skip all custom patches.
     - If the vita does not boot, follow the [Bootloop] section
-  
+	
 # Notes
+ - While psp2hfw is in beta it should be considered a PoC for advanced users; A 1-click method will come with the next firmware update.
+ - My base testing firmware is 3.65 and i recommend it for using this toolset with, it assures full compatibility and ease of debugging.
+  
+# Credits
+ - Team Molecule for henkaku, taihen, enso and the update_sm 0x50002 write primitive.
+ - TheFlow for help with the sleep/resume stuff.
  
  
  
