@@ -20,7 +20,7 @@ Dual FW lets you run the second firmware from a SD card in a GC-SD adapter; it i
 1) Download and run the emmcfw->gcsd clone tool from https://github.com/SKGleba/psp2hfw/tree/master/tools/clone_int2ext_fwonly ; it will clone firmware/software sectors to GCSD
     - It is recommended to use xerpi's plugin loader for that ( https://bitbucket.org/xerpi/vita_plugin_loader )
     - If the load fails it means that the SD card was not detected; also cloning will take some time
-    - After the clone finishes uninstall your GC-SD driver unless you are using sony's (internal manufacturing mode or yamt)/
+    - After the clone finishes uninstall your GC-SD driver unless you are using sony's (internal manufacturing mode or yamt)
 2) Connect your vita to a power supply and boot holding START, if it boots - emunand works
     - You can make sure by deleting/adding a file in tm0 and rebooting normally; if the change is not present - emunand works
     - Sony's built-in GC-SD driver is very strict in terms of compatibility, not all sd cards will work
@@ -45,7 +45,8 @@ Currently not all firmwares can be installed on top of current base bootloaders 
     - psst, if you don't have the required keys use this fork: https://github.com/zecoxao/sceutils
 3) Put them in ux0:data/hfw/ as os0.bin and vs0.bin; if you are using dualfw put os0:patches.e2xd in ux0:data/hfw/patches.e2xd
 4) Open the installer and press [start] to flash, it may take some time; after the flash completes it will show you the current HFW info and ask to reboot
-    - if the vita does not reboot follow the steps in the recovery section.
+    - if the vita does not reboot follow the steps in the recovery section
+5) Open the enso_ex installer and sync scripts.
  
 ## Uninstallation
 1) Download your original firmware PUP and extract the vs0 fs image from it
@@ -85,6 +86,7 @@ With enso_ex you should be able to recover from all possible HFW related soft/"h
 # Notes
  - While psp2hfw is in beta it should be considered a PoC for advanced users; A 1-click method will come with the next firmware update.
  - My base testing firmware is 3.65 and i recommend it for using this toolset with, it assures full compatibility and ease of debugging.
+ - You can find some pre-extracted filesystem images here: https://mega.nz/folder/v45lhYBR#t2TSvnynd50e76B5OTR2XA
   
 # Credits
  - Team Molecule for henkaku, taihen, enso and the update_sm 0x50002 write primitive.
