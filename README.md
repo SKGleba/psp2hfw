@@ -1,4 +1,7 @@
 # psp2hfw
+
+# This repository is currently being updated to support enso_ex v4.5
+
 The goal of this repository is to provide tools and instructions for running a hybrid firmware (HFW) on the Playstation Vita console
  - in this case a different firmware/software version than the bootloaders version(s).
  
